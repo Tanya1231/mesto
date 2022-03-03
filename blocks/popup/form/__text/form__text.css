@@ -1,0 +1,18 @@
+.form__text {
+  border: none;
+  width: 358px;
+  padding: 0;
+  border-bottom: 1px solid #000000;
+  opacity: 0.2;
+  margin-bottom: 30px;
+}
+
+.form__text:last-of-type {
+  margin-bottom: 45px;
+}
+
+@media screen and (max-width: 767px) {
+  .form__text {
+    width: 238px;
+  }
+}

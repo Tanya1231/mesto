@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mesto</title>
+    <link rel="stylesheet" href="./pages/index.css" />
+  </head>
+  <body>
+    <div class="page">
+      <header class="header">
+        <div class="logo">
+          <img
+            class="header__logo"
+            src="./images/header__logo.svg"
+            alt="Место Россия"
+          />
+          <div class="header__line"></div>
+        </div>
+      </header>
+      <main>
+        <section class="profile">
+          <div class="profile__container">
+            <img
+              class="profile__avatar"
+              src="./images/profile__avatar.jpg"
+              alt="Аватар"
+            />
+            <div class="profile__info">
+              <div class="profile__row">
+                <h1 class="profile__title">Жак-Ив Кусто</h1>
+                <button class="profile__edit-button" type="button">
+                  <img
+                    class="profile__redak"
+                    src="./images/profile__redak.svg"
+                    alt="редактировать"
+                  />
+                </button>
+              </div>
+              <p class="profile__subtitle">
+                Исследователь океана
+              </p>
+            </div>
+          </div>
+          <button class="profile__addbutton" type="button">
+            <img
+              class="profile__vector"
+              src="./images/profile__addbutton.svg"
+              alt="добавить"
+            />
+          </button>
+        </section>
+        <section class="elements">
+          <div class="element">
+            <img
+              class="element__image"
+              src="./images/karachayevsk.jpg"
+              alt="Карачаевск"
+            />
+            <div class="element__mask-group">
+              <h2 class="element__title">Карачаевск</h2>
+              <button type="button" class="element__button">
+                <img
+                  class="element__vector element__vector-active"
+                  src="/images/like.jpg"
+                  alt="like"
+                />
+              </button>
+            </div>
+          </div>
+          <div class="element">
+            <img
+              class="element__image"
+              src="./images/mount_elbrus.jpg"
+              alt="Гора Эльбрус"
+            />
+            <div class="element__mask-group">
+              <h2 class="element__title">Гора Эльбрус</h2>
+              <button type="button" class="element__button">
+                <img
+                  class="element__vector element__vector_active"
+                  src="/images/like.jpg"
+                  alt="like"
+                />
+              </button>
+            </div>
+          </div>
+          <div class="element">
+            <img
+              class="element__image"
+              src="./images/dombay.jpg"
+              alt="Домбай"
+            />
+            <div class="element__mask-group">
+              <h2 class="element__title">Домбай</h2>
+              <button type="button" class="element__button">
+                <img
+                  class="element__vector element__vector-active"
+                  src="/images/like.jpg"
+                  alt="like"
+                />
+              </button>
+            </div>
+          </div>
+          <div class="element">
+            <img
+              class="element__image"
+              src="./images/mount_elbrus.jpg"
+              alt="Гора Эльбрус"
+            />
+            <div class="element__mask-group">
+              <h2 class="element__title">Гора Эльбрус</h2>
+              <button type="button" class="element__button">
+                <img
+                  class="element__vector element__vector-active"
+                  src="/images/like.jpg"
+                  alt="like"
+                />
+              </button>
+            </div>
+          </div>
+          <div class="element">
+            <img
+              class="element__image"
+              src="./images/dombay.jpg"
+              alt="Домбай"
+            />
+            <div class="element__mask-group">
+              <h2 class="element__title">Домбай</h2>
+              <button type="button" class="element__button">
+                <img
+                  class="element__vector element__vector-active"
+                  src="/images/like.jpg"
+                  alt="like"
+                />
+              </button>
+            </div>
+          </div>
+          <div class="element">
+            <img
+              class="element__image"
+              src="./images/karachayevsk.jpg"
+              alt="Карачаевск"
+            />
+            <div class="element__mask-group">
+              <h2 class="element__title">Карачаево-Черкессия</h2>
+              <button type="button" class="element__button">
+                <img
+                  class="element__vector element__vector-active"
+                  src="/images/like.jpg"
+                  alt="like"
+                />
+              </button>
+            </div>
+          </div>
+        </section>
+      </main>
+      <footer class="footer">
+        <p class="footer__copyright">&copy; 2022. Татьяна Абдулова</p>
+      </footer>
+    </div>
+    <div class="popup">
+      <div class="popup__container">
+        <h2 class="popup__heading">Редактировать профиль</h2>
+        <form class="form">
+          <fieldset class="form__container">
+            <input
+              class="form__name"
+              name="name"
+              placeholder="Жак-Ив Кусто"
+            />
+            <div class="form__text"></div>
+            <input
+              class="form__info"
+              type="text"
+              placeholder="Исследователь океана"
+            />
+            <div class="form__text"></div>
+          </fieldset>
+          <button type="submit" class="form__button">Сохранить</button>
+        </form>
+        <button type="button" class="popup__button-reset"></button>
+      </div>
+    </div>
+    <script src="./script/script.js"></script>
+  </body>
+</html>

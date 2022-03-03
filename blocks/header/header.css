@@ -1,0 +1,23 @@
+.header {
+  display: flex;
+  flex-direction: column;
+  padding: 45px 200px 0;
+}
+
+@media screen and (max-width: 1024px) {
+  .header {
+    padding: 40px 100px 0;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .header {
+    padding: 30px 50px 0;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .header {
+    padding: 28px 0 0;
+  }
+}

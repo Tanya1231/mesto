@@ -1,0 +1,26 @@
+.popup__button-reset {
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  top: -40px;
+  right: -40px;
+  background-image: url(/images/button__close.svg);
+  border: 0;
+  background-color: transparent;
+}
+
+.popup__button-reset:hover {
+  opacity: 0.6;
+  transition: opacity 0.4s ease;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 767px) {
+  .popup__button-reset {
+    background-size: cover;
+    width: 20px;
+    height: 20px;
+    top: -35px;
+    right: -3px;
+  }
+}

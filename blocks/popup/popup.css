@@ -1,0 +1,19 @@
+.popup {
+  position: fixed;
+  display: none;
+  right: 0;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  padding: 195px 425px 0;
+}
+
+.popup:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+@media screen and (max-width: 767px) {
+  .popup {
+    padding: 123px 19px;
+  }
+}
