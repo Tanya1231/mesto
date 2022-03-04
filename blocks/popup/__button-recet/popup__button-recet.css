@@ -1,4 +1,4 @@
-.popup__button-reset {
+.popup__button-recet {
   position: absolute;
   width: 32px;
   height: 32px;
@@ -9,14 +9,14 @@
   background-color: transparent;
 }
 
-.popup__button-reset:hover {
+.popup__button-recet:hover {
   opacity: 0.6;
   transition: opacity 0.4s ease;
   cursor: pointer;
 }
 
 @media screen and (max-width: 767px) {
-  .popup__button-reset {
+  .popup__button-recet {
     background-size: cover;
     width: 20px;
     height: 20px;
