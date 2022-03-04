@@ -1,0 +1,22 @@
+.main {
+  width: 880px;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 1024px) {
+    .main {
+      width: 1024px;
+    }
+  }
+
+@media screen and (max-width: 768px) {
+  .main {
+    width: 768px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .main {
+    width: 282px;
+  }
+}

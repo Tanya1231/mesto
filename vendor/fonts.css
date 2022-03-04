@@ -21,3 +21,11 @@
   src: url(./fonts/Inter-Black.woff) format("woff"),
     url(./fonts/Inter-Black.woff2) format("woff2");
 }
+
+@font-face {
+  font-family: "Arial", sans-serif;
+  font-style: normal;
+  src: url(./fonts/Arial-Black.ttf) format("ttf"),
+    url(./fonts/Arial-Black.woff) format("woff");
+}
+

@@ -1,6 +1,6 @@
 let popup = document.querySelector(".popup");
 let openPopup = document.querySelector(".profile__edit-button");
-let closePopup = popup.querySelector(".popup__button-reset");
+let closePopup = popup.querySelector(".popup__button-recet");
 
 openPopup.addEventListener("click", function () {
   popup.classList.toggle("popup__open");
