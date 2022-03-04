@@ -42,8 +42,6 @@
 
 @import url(../blocks/elements/element/__vector/element__vector.css);
 
-@import url(../blocks/elements/element/__vector/_active/element__vector_active.css);
-
 @import url(../blocks/footer/footer.css);
 
 @import url(../blocks/footer/__copyright/footer__copyright.css);
