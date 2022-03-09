@@ -4,15 +4,13 @@
   height: 32px;
   top: -40px;
   right: -40px;
-  background-image: url(/images/button__close.svg);
   border: 0;
-  background-color: transparent;
+  transition: opacity 0.4s ease;
+  cursor: pointer;
 }
 
 .popup__button-recet:hover {
   opacity: 0.6;
-  transition: opacity 0.4s ease;
-  cursor: pointer;
 }
 
 @media screen and (max-width: 767px) {

@@ -3,44 +3,38 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mesto</title>
+    <title>Место</title>
     <link rel="stylesheet" href="./pages/index.css" />
   </head>
+
   <body>
     <div class="page">
       <header class="header">
-        <div class="logo">
-          <img
-            class="header__logo"
-            src="./images/header__logo.svg"
-            alt="Место Россия"
-          />
-          <div class="header__line"></div>
-        </div>
+        <img
+          class="header__logo"
+          src="./images/header__logo.svg"
+          alt="Место Россия"
+        />
       </header>
       <main class="main">
         <section class="profile">
-          <div class="profile__container">
-            <img
-              class="profile__avatar"
-              src="./images/profile__avatar.jpg"
-              alt="Аватар"
-            />
-            <div class="profile__info">
-              <div class="profile__row">
-                <h1 class="profile__title">Жак-Ив Кусто</h1>
-                <button class="profile__edit-button" type="button">
-                  <img
-                    class="profile__redak"
-                    src="./images/profile__redak.svg"
-                    alt="редактировать"
-                  />
-                </button>
-              </div>
-              <p class="profile__subtitle">
-                Исследователь океана
-              </p>
+          <img
+            class="profile__avatar"
+            src="./images/profile__avatar.jpg"
+            alt="Аватар"
+          />
+          <div class="profile__info">
+            <div class="profile__row">
+              <h1 class="profile__title">Жак-Ив Кусто</h1>
+              <button class="profile__edit-button" type="button">
+                <img
+                  class="profile__redak"
+                  src="./images/profile__redak.svg"
+                  alt="редактировать"
+                />
+              </button>
             </div>
+            <p class="profile__subtitle">Исследователь океана</p>
           </div>
           <button class="profile__addbutton" type="button">
             <img
@@ -59,13 +53,10 @@
             />
             <div class="element__mask-group">
               <h2 class="element__title">Карачаевск</h2>
-              <button type="button" class="element__button">
-                <img
-                  class="element__vector element__vector_active"
-                  src="/images/like.svg"
-                  alt="лайк"
-                />
-              </button>
+              <button
+                type="button"
+                class="element__vector element__vector_active"
+              ></button>
             </div>
           </div>
           <div class="element">
@@ -75,14 +66,13 @@
               alt="Гора Эльбрус"
             />
             <div class="element__mask-group">
-              <h2 class="element__title">Гора Эльбрус</h2>
-              <button type="button" class="element__button">
-                <img
-                  class="element__vector element__vector_active"
-                  src="/images/like.svg"
-                  alt="лайк"
-                />
-              </button>
+              <h2 class="element__title">
+                Гора Эльбрус
+              </h2>
+              <button
+                type="button"
+                class="element__vector element__vector_active"
+              ></button>
             </div>
           </div>
           <div class="element">
@@ -93,13 +83,10 @@
             />
             <div class="element__mask-group">
               <h2 class="element__title">Домбай</h2>
-              <button type="button" class="element__button">
-                <img
-                  class="element__vector element__vector_active"
-                  src="/images/like.svg"
-                  alt="лайк"
-                />
-              </button>
+              <button
+                type="button"
+                class="element__vector element__vector_active"
+              ></button>
             </div>
           </div>
           <div class="element">
@@ -109,14 +96,13 @@
               alt="Гора Эльбрус"
             />
             <div class="element__mask-group">
-              <h2 class="element__title">Гора Эльбрус</h2>
-              <button type="button" class="element__button">
-                <img
-                  class="element__vector element__vector_active"
-                  src="/images/like.svg"
-                  alt="лайк"
-                />
-              </button>
+              <h2 class="element__title">
+                Гора Эльбрус
+              </h2>
+              <button
+                type="button"
+                class="element__vector element__vector_active"
+              ></button>
             </div>
           </div>
           <div class="element">
@@ -127,13 +113,10 @@
             />
             <div class="element__mask-group">
               <h2 class="element__title">Домбай</h2>
-              <button type="button" class="element__button">
-                <img
-                  class="element__vector element__vector_active"
-                  src="/images/like.svg"
-                  alt="лайк"
-                />
-              </button>
+              <button
+                type="button"
+                class="element__vector element__vector_active"
+              ></button>
             </div>
           </div>
           <div class="element">
@@ -143,14 +126,13 @@
               alt="Карачаевск"
             />
             <div class="element__mask-group">
-              <h2 class="element__title">Карачаево-Черкессия</h2>
-              <button type="button" class="element__button">
-                <img
-                  class="element__vector element__vector_active"
-                  src="/images/like.svg"
-                  alt="лайк"
-                />
-              </button>
+              <h2 class="element__title">
+                Карачаево-Черкессия
+              </h2>
+              <button
+                type="button"
+                class="element__vector element__vector_active"
+              ></button>
             </div>
           </div>
         </section>
@@ -158,30 +140,36 @@
       <footer class="footer">
         <p class="footer__copyright">&copy; 2022. Татьяна Абдулова</p>
       </footer>
-    </div>
-    <div class="popup">
-      <div class="popup__container">
-        <h2 class="popup__heading">Редактировать профиль</h2>
-        <form class="form">
-          <fieldset class="form__container">
+      <div class="popup">
+        <div class="popup__container">
+          <h2 class="popup__heading">Редактировать профиль</h2>
+          <form class="form" name="forma">
             <input
-              class="form__name"
+              class="form__container form__container_name"
               name="name"
-              placeholder="Жак-Ив Кусто"
+              type="text"
+              value="Жак-Ив Кусто"
             />
             <div class="form__text"></div>
             <input
-              class="form__info"
+              class="form__container form__container_info"
+              name="text"
               type="text"
-              placeholder="Исследователь океана"
+              value="Исследователь океана"
             />
             <div class="form__text"></div>
-          </fieldset>
-          <button type="submit" class="form__button">Сохранить</button>
-        </form>
-        <button type="button" class="popup__button-recet"></button>
+            <button type="submit" class="form__button">Сохранить</button>
+          </form>
+          <button type="button" class="popup__button">
+            <img
+            class="popup__button-recet"
+              src="/images/button__close.svg"
+              alt="закрыть"
+            />
+          </button>
+        </div>
       </div>
     </div>
-    <script src="./script/script.js"></script>
+    <script src="./scripts/index.js"></script>
   </body>
 </html>

@@ -1,0 +1,13 @@
+.form__container_name {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 17px;
+  color: #000000;
+  transition: all 5000s ease-in-out;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  margin: 0 auto 30px;
+  width: 100%;
+}

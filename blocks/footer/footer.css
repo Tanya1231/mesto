@@ -2,29 +2,25 @@
   color: #545454;
   padding-top: 66px;
   padding-bottom: 60px;
-  padding-left: 0px;
   padding-right: auto;
-  width: 880px;
+  max-width: 880px;
   margin: 0 auto;
 }
 
 @media screen and (max-width: 1024px) {
   .footer {
-    padding: 40px auto 0;
-    width: 824px;
+    padding: 40px 120px 60px;
   }
 }
 
 @media screen and (max-width: 768px) {
   .footer {
-    padding: 30px auto 0;
-    width: 668px;
+    padding: 30px 70px 40px;
   }
 }
 
 @media screen and (max-width: 767px) {
   .footer {
-  width: 282px;
-  padding: 48px auto 36px;
+  padding: 48px 19px 36px;
   }
 }

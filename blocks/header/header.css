@@ -4,26 +4,25 @@
   padding-top: 45px;
   padding-bottom: 0;
   margin: 0 auto;
-  width: 880px;
+  max-width: 880px;
+  border-bottom: 1px solid rgb(84, 84, 84, 0.7);
 }
 
 @media screen and (max-width: 1024px) {
   .header {
-    padding: 40px 100px 0;
-    width: 824px;
+    padding: 40px auto 0;
   }
 }
 
 @media screen and (max-width: 768px) {
   .header {
     padding: 30px 50px 0;
-    width: 668px;
   }
 }
 
 @media screen and (max-width: 767px) {
   .header {
     padding: 28px 0 0;
-    width: 282px;
+    width: 100%;
   }
 }

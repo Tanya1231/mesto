@@ -1,18 +1,22 @@
 .profile {
     margin: 40px auto 0;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
+    flex-direction: row;
   }
   
   @media screen and (max-width: 1024px) {
     .profile {
-      margin: 40px 100px 0;
+      margin-left: 100px;
+      margin-right: 100px;
     }
   }
   
   @media screen and (max-width: 768px) {
     .profile {
-      margin: 30px 50px 0;
+      margin-top: 30px;
+      margin-right: 50px;
+      margin-left: 50px;
     }
   }
   
@@ -20,5 +24,6 @@
     .profile {
       flex-direction: column;
       margin-top: 42px;
+      flex-direction: column;
     }
   }
