@@ -2,7 +2,7 @@
   background: #000000;
   border-radius: 2px;
   color: white;
-  font-family: "Inter","Arial";
+  font-family: "Inter",sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 18px;
@@ -13,6 +13,8 @@
   max-width: 358px;
   margin: 0 auto;
   padding: 0;
+  border: none;
+  justify-content: center;
 }
 
 .form__button:hover {

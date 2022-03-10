@@ -4,9 +4,8 @@
   box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.15);
   border-radius: 10px;
   max-width: 430px;
+  width: 100%;
   max-height: 330px;
+  height: 100%;
   display: block;
-  padding-left: 36px;
-  padding-right: 36px;
-  padding-bottom: 37px;
 }

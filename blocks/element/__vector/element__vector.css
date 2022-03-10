@@ -3,10 +3,11 @@
   height: 19px;
   align-self: center;
   padding: 0;
-  background-image: url(../../../images/Vector.png);
+  background-image: url(../../../images/Vector.svg);
   object-fit: cover;
   border: 0;
   background-color: transparent;
+  cursor: pointer;
 }
 
 .element__vector:hover {

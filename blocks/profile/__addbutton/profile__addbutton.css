@@ -7,6 +7,11 @@
   height: 50px;
   align-self: center;
   margin-left: auto;
+  background-image: url(../../../images/profile__addbutton.svg);
+  background-size: 22px 22px;
+  background-position: center center;
+  object-fit: cover;
+  background-repeat: no-repeat;
 }
 
 .profile__addbutton:hover {
@@ -20,5 +25,6 @@
     width: 282px;
     margin: 33px 19px 0;
     justify-self: center;
+    background-size: 16px 16px;
   }
 }

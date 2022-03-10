@@ -10,7 +10,7 @@
 
 @media screen and (max-width: 1024px) {
   .header {
-    padding: 40px auto 0;
+    padding-top: 40px;
   }
 }
 

@@ -2,7 +2,6 @@
   color: #545454;
   padding-top: 66px;
   padding-bottom: 60px;
-  padding-right: auto;
   max-width: 880px;
   margin: 0 auto;
 }
@@ -13,14 +12,8 @@
   }
 }
 
-@media screen and (max-width: 768px) {
-  .footer {
-    padding: 30px 70px 40px;
-  }
-}
-
 @media screen and (max-width: 767px) {
   .footer {
-  padding: 48px 19px 36px;
+    padding: 48px 19px 36px;
   }
 }
