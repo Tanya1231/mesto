@@ -9,7 +9,6 @@
   cursor: pointer;
   background-image: url(../../../images/button__close.svg);
   background-color: transparent;
-  border: 0;
 }
 
 .popup__button-recet:hover {
