@@ -1,11 +1,5 @@
 .popup_open {
   display: flex;
   justify-content: center;
-  margin-top: 195px;
-}
-
-@media screen and (max-width: 767px) {
-  .popup_open {
-    margin: 123px 19px 0;
-  }
+  align-items: center;
 }
