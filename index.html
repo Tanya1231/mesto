@@ -32,84 +32,21 @@
           </div>
           <button class="profile__addbutton" type="button"></button>
         </section>
-        <section class="elements">
+        <template class="elements">
           <div class="element">
-            <img
-              class="element__image"
-              src="./images/karachayevsk.jpg"
-              alt="Карачаевск"
-            />
+            <button class="element__delete" type="button"></button>
+            <img class="element__image" src="#" alt=""/>
             <div class="element__mask-group">
-              <h2 class="element__title">Карачаевск</h2>
+              <h2 class="element__title"></h2>
               <button type="button" class="element__vector"></button>
             </div>
           </div>
-          <div class="element">
-            <img
-              class="element__image"
-              src="./images/mount_elbrus.jpg"
-              alt="Гора Эльбрус"
-            />
-            <div class="element__mask-group">
-              <h2 class="element__title">
-                Гора Эльбрус
-              </h2>
-              <button type="button" class="element__vector"></button>
-            </div>
-          </div>
-          <div class="element">
-            <img
-              class="element__image"
-              src="./images/dombay.jpg"
-              alt="Домбай"
-            />
-            <div class="element__mask-group">
-              <h2 class="element__title">Домбай</h2>
-              <button type="button" class="element__vector"></button>
-            </div>
-          </div>
-          <div class="element">
-            <img
-              class="element__image"
-              src="./images/mount_elbrus.jpg"
-              alt="Гора Эльбрус"
-            />
-            <div class="element__mask-group">
-              <h2 class="element__title">
-                Гора Эльбрус
-              </h2>
-              <button type="button" class="element__vector"></button>
-            </div>
-          </div>
-          <div class="element">
-            <img
-              class="element__image"
-              src="./images/dombay.jpg"
-              alt="Домбай"
-            />
-            <div class="element__mask-group">
-              <h2 class="element__title">Домбай</h2>
-              <button type="button" class="element__vector"></button>
-            </div>
-          </div>
-          <div class="element">
-            <img
-              class="element__image"
-              src="./images/karachayevsk.jpg"
-              alt="Карачаевск"
-            />
-            <div class="element__mask-group">
-              <h2 class="element__title">
-                Карачаево-Черкессия
-              </h2>
-              <button type="button" class="element__vector"></button>
-            </div>
-          </div>
-        </section>
+        </template>
       </main>
       <footer class="footer">
         <p class="footer__copyright">&copy; 2022. Татьяна Абдулова</p>
       </footer>
+    </div>
       <div class="popup">
         <div class="popup__container">
           <h2 class="popup__heading">Редактировать профиль</h2>
@@ -131,6 +68,33 @@
           <button type="button" class="popup__button-recet"></button>
         </div>
       </div>
+      <div class="popup popupform">
+        <div class="popup__container">
+          <h2 class="popup__heading popupform__heading">Новое место</h2>
+          <form class="form formpop">
+            <input
+              class="form__container form__container_type_inf"
+              name="name"
+              type="text"
+              placeholder="Название"
+            />
+            <input
+              class="form__container form__container_type_src"
+              name="img"
+              type="url"
+              placeholder="Ссылка на картинку"
+            />
+            <button type="submit" class="form__button">Создать</button>
+          </form>
+          <button type="button" class="popup__button-recet"></button>
+        </div>
+      </div>
+      <div class="popup popup_open-img">
+        <div class="popup__con">
+          <img class="popup__image" alt="" src=""/>
+          <h2 class="popup__subtitle"></h2>
+          <button type="button" class="popup__button-recet"></button>
+        </div>
     </div>
     <script src="./scripts/index.js"></script>
   </body>
