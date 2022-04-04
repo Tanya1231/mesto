@@ -1,4 +1,4 @@
-.popup__button-recet {
+.popup__button-close {
   position: absolute;
   width: 32px;
   height: 32px;
@@ -11,12 +11,12 @@
   background-image: url(../../../images/button__close.svg);
 }
 
-.popup__button-recet:hover {
+.popup__button-close:hover {
   opacity: 0.6;
 }
 
 @media screen and (max-width: 767px) {
-  .popup__button-recet {
+  .popup__button-close {
     background-size: cover;
     width: 20px;
     height: 20px;

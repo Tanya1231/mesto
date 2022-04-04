@@ -1,0 +1,6 @@
+.popup__container-image {
+position: relative;
+position: fixed;
+align-items: center;
+justify-content: center;
+}

@@ -47,7 +47,7 @@
         <p class="footer__copyright">&copy; 2022. Татьяна Абдулова</p>
       </footer>
     </div>
-      <div class="popup">
+      <div class="popup popup_type_profile">
         <div class="popup__container">
           <h2 class="popup__heading">Редактировать профиль</h2>
           <form class="form" name="forma">
@@ -65,13 +65,13 @@
             />
             <button type="submit" class="form__button">Сохранить</button>
           </form>
-          <button type="button" class="popup__button-recet"></button>
+          <button type="button" class="popup__button-close"></button>
         </div>
       </div>
-      <div class="popup popupform">
+      <div class="popup popup_add_card">
         <div class="popup__container">
-          <h2 class="popup__heading popupform__heading">Новое место</h2>
-          <form class="form formpop">
+          <h2 class="popup__heading">Новое место</h2>
+          <form class="form form_popup_add-card">
             <input
               class="form__container form__container_type_inf"
               name="name"
@@ -86,16 +86,17 @@
             />
             <button type="submit" class="form__button">Создать</button>
           </form>
-          <button type="button" class="popup__button-recet"></button>
+          <button type="button" class="popup__button-close"></button>
         </div>
       </div>
       <div class="popup popup_open-img">
-        <div class="popup__con">
-          <img class="popup__image" src="#" alt=""/>
+        <div class="popup__container-image">
+          <img class="popup__image" src=" " alt="Увеличенная картинка"/>
           <h2 class="popup__subtitle"></h2>
-          <button type="button" class="popup__button-recet"></button>
+          <button type="button" class="popup__button-close"></button>
         </div>
     </div>
+    <script src="./scripts/cards.js"></script>
     <script src="./scripts/index.js"></script>
   </body>
 </html>
