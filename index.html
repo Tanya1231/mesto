@@ -35,7 +35,7 @@
         <template class="elements">
           <div class="element">
             <button class="element__delete" type="button"></button>
-            <img class="element__image" src="#" alt=""/>
+            <img class="element__image" src="#" alt="" />
             <div class="element__mask-group">
               <h2 class="element__title"></h2>
               <button type="button" class="element__vector"></button>
@@ -47,56 +47,75 @@
         <p class="footer__copyright">&copy; 2022. Татьяна Абдулова</p>
       </footer>
     </div>
-      <div class="popup popup_type_profile">
-        <div class="popup__container">
-          <h2 class="popup__heading">Редактировать профиль</h2>
-          <form class="form" name="forma">
-            <input
-              class="form__container form__container_type_name"
-              name="name"
-              type="text"
-              value="Жак-Ив Кусто"
-            />
-            <input
-              class="form__container form__container_type_info"
-              name="text"
-              type="text"
-              value="Исследователь океана"
-            />
-            <button type="submit" class="form__button">Сохранить</button>
-          </form>
-          <button type="button" class="popup__button-close"></button>
-        </div>
+    <div class="popup popup_type_profile">
+      <div class="popup__container">
+        <h2 class="popup__heading">Редактировать профиль</h2>
+        <form class="form" name="forma" novalidate>
+          <input
+            class="form__container form__container_type_name"
+            name="name"
+            type="text"
+            id="name"
+            value="Жак-Ив Кусто"
+            minlength="2"
+            maxlength="40"
+            required
+          />
+          <span class="error" id="name-error"></span>
+          <input
+            class="form__container form__container_type_info"
+            name="text"
+            type="text"
+            id="text"
+            value="Исследователь океана"
+            minlength="2"
+            maxlength="200"
+            required
+          />
+          <span class="error" id="text-error"></span>
+          <button type="submit" class="button form__button">Сохранить</button>
+        </form>
+        <button type="button" class="popup__button-close"></button>
       </div>
-      <div class="popup popup_add_card">
-        <div class="popup__container">
-          <h2 class="popup__heading">Новое место</h2>
-          <form class="form form_popup_add-card">
-            <input
-              class="form__container form__container_type_inf"
-              name="name"
-              type="text"
-              placeholder="Название"
-            />
-            <input
-              class="form__container form__container_type_src"
-              name="img"
-              type="url"
-              placeholder="Ссылка на картинку"
-            />
-            <button type="submit" class="form__button">Создать</button>
-          </form>
-          <button type="button" class="popup__button-close"></button>
-        </div>
+    </div>
+    <div class="popup popup_add_card">
+      <div class="popup__container">
+        <h2 class="popup__heading">Новое место</h2>
+        <form class="form form_popup_add-card" name="card" novalidate>
+          <input
+            class="form__container form__container_type_inf"
+            name="info"
+            id="info"
+            type="text"
+            placeholder="Название"
+            minlength="2"
+            maxlength="30"
+            required
+          />
+          <span class="error" id="info-error"></span>
+          <input
+            class="form__container form__container_type_src"
+            name="img"
+            id="img"
+            type="url"
+            placeholder="Ссылка на картинку"
+            required
+          />
+          <span class="error" id="img-error"></span>
+          <button type="submit" class="button form__button">Создать</button>
+        </form>
+        <button type="button" class="popup__button-close"></button>
       </div>
-      <div class="popup popup_open-img">
-        <div class="popup__container-image">
-          <img class="popup__image" src=" " alt="Увеличенная картинка"/>
-          <h2 class="popup__subtitle"></h2>
-          <button type="button" class="popup__button-close"></button>
-        </div>
+    </div>
+    <div class="popup popup_open-img">
+      <div class="popup__container-image">
+        <img class="popup__image" src="#" alt="Увеличенная картинка" />
+        <h2 class="popup__subtitle"></h2>
+        <button type="button" class="popup__button-close"></button>
+      </div>
     </div>
     <script src="./scripts/cards.js"></script>
     <script src="./scripts/index.js"></script>
+    <script src="./scripts/validate.js"></script>
   </body>
 </html>

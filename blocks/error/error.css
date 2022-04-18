@@ -1,0 +1,17 @@
+.error {
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 12px;
+line-height: 15px;
+color: #f00;
+margin-bottom: 13px;
+max-width: 358px;
+width: 100%;
+margin-left: auto;
+margin-right: auto;
+}
+
+.error:last-of-type {
+margin-bottom: 31px;
+}

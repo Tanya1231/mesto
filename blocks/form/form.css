@@ -1,7 +1,7 @@
 .form {
-  display: flex;
-  flex-direction: column;
-  min-width: 238px;
-  margin-left: 22px;
-  margin-right: 22px;
+display: flex; 
+flex-direction: column; 
+min-width: 238px; 
+margin-left: 22px; 
+margin-right: 22px;
 }
