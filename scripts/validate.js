@@ -1,8 +1,10 @@
-function enableValidation(config) {
-  const form = document.querySelector(config.form);
-  form.addEventListener('submit', evt => handleFormSumbit(evt, config));
-  form.addEventListener('input', evt => handleFormInput(evt, config));
+const enableValidation = (config) => {
+  const formList = Array.from(document.querySelectorAll('.form'));
+  formList.forEach((form) => {
+  form.addEventListener("submit", evt => handleFormSumbit(evt, config));
+  form.addEventListener("input", evt => handleFormInput(evt, config));
   setButtonState(form, config)
+  })
 }
 
 function handleFormSumbit(evt) {
@@ -12,7 +14,7 @@ function handleFormSumbit(evt) {
 function handleFormInput(evt, config) {
   const form = evt.currentTarget;
   const input = evt.target;
-  //ищем не валидные поля и устанавливаем ошибки
+  //ищем не валидные поля и установить ошибки
   setCustomError(input, config);
   // показываем ошибки
   setFieldError(input);
@@ -22,10 +24,10 @@ function handleFormInput(evt, config) {
 
 function setCustomError(input) {
   const validity = input.validity;
-  input.setCustomValidity('');
+  input.setCustomValidity("");
   if (validity.tooShort || validity.tooLong) {
     const currentLength = input.value.length;
-    const min = input.getAttribute('minlength');
+    const min = input.getAttribute("minlength");
     input.setCustomValidity(
       `Минимальное колличество символов ${min}. Длина текста сейчас ${currentLength} символ`
     );
@@ -41,18 +43,19 @@ function setButtonState(form, config) {
   const button = form.querySelector(config.submitButtonSelector);
   const isValid = form.checkValidity();
   if (isValid) {
+    button.classList.add(config.sumbitButton);
     button.classList.remove(config.inactiveButtonClass);
-    button.removeAttribute('disabled');
+    button.removeAttribute("disabled");
   } else {
     button.classList.add(config.inactiveButtonClass);
-    button.setAttribute('disabled', 'disabled');
+    button.classList.remove(config.sumbitButton);
+    button.setAttribute("disabled", "disabled");
   }
 }
 
 enableValidation({
-  form: '.form[name="forma"]',
-  form: '.form[name="card"]',
-  sumbitButton: '.form__button',
-  submitButtonSelector: '.button',
-  inactiveButtonClass: 'form__button_invalid',
+  form: ".form",
+  sumbitButton: ".form__button",
+  submitButtonSelector: ".button",
+  inactiveButtonClass: "form__button_invalid",
 });

@@ -18,7 +18,7 @@ const nameForm = document.querySelector('.form__container_type_inf');
 const linkForm = document.querySelector('.form__container_type_src');
 
 const picturePopupImage = document.querySelector('.popup__image');
-const popupSub = document.querySelector('.popup__subtitle');
+const popupSubtitle = document.querySelector('.popup__subtitle');
 
 const buttonProfile = document.querySelector('.profile__edit-button');
 const profileName = document.querySelector('.profile__title');
@@ -75,7 +75,7 @@ function handleProfileFormSubmit(evt) {
 
 formProfileEdit.addEventListener('submit', handleProfileFormSubmit);
 
-//сохранение информации поппа 1
+//сохранение информации попaпа 1
 
 function createCard(nameValue, linkValue) {
   const cardsElement = elementTemplate
@@ -90,7 +90,7 @@ function createCard(nameValue, linkValue) {
 
   function bigImage () {
     picturePopupImage.src = linkValue;
-    popupSub.textContent = nameValue;
+    popupSubtitle.textContent = nameValue;
     picturePopupImage.alt = nameValue;
     openPopup(popupImg);
   }

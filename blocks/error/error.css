@@ -5,13 +5,13 @@ font-weight: 400;
 font-size: 12px;
 line-height: 15px;
 color: #f00;
-margin-bottom: 13px;
+margin-top: 1px;
+bottom: 30px;
 max-width: 358px;
 width: 100%;
-margin-left: auto;
-margin-right: auto;
+margin: 1px auto 13px;
 }
 
 .error:last-of-type {
-margin-bottom: 31px;
+margin-bottom: 25px;
 }
