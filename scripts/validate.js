@@ -1,14 +1,15 @@
 const enableValidation = (config) => {
   const formList = Array.from(document.querySelectorAll('.form'));
   formList.forEach((form) => {
-  form.addEventListener("submit", evt => handleFormSumbit(evt, config));
+  form.addEventListener("submit", evt => handleFormSumbit(evt, form, config));
   form.addEventListener("input", evt => handleFormInput(evt, config));
-  setButtonState(form, config)
+  setButtonState(form, config);
   })
 }
 
-function handleFormSumbit(evt) {
+function handleFormSumbit(evt, form, config) {
   evt.preventDefault();
+  setButtonState(form, config);
 }
 
 function handleFormInput(evt, config) {
@@ -31,7 +32,7 @@ function setCustomError(input) {
     input.setCustomValidity(
       `Минимальное колличество символов ${min}. Длина текста сейчас ${currentLength} символ`
     );
-  }
+  } 
 }
 
 function setFieldError(input) {
@@ -40,15 +41,13 @@ function setFieldError(input) {
 }
 
 function setButtonState(form, config) {
-  const button = form.querySelector(config.submitButtonSelector);
+  const button = form.querySelector(config.sumbitButton);
   const isValid = form.checkValidity();
   if (isValid) {
-    button.classList.add(config.sumbitButton);
     button.classList.remove(config.inactiveButtonClass);
     button.removeAttribute("disabled");
   } else {
     button.classList.add(config.inactiveButtonClass);
-    button.classList.remove(config.sumbitButton);
     button.setAttribute("disabled", "disabled");
   }
 }
@@ -56,6 +55,5 @@ function setButtonState(form, config) {
 enableValidation({
   form: ".form",
   sumbitButton: ".form__button",
-  submitButtonSelector: ".button",
   inactiveButtonClass: "form__button_invalid",
 });

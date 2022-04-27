@@ -137,6 +137,7 @@ buttonCloseImg.addEventListener('click', function () {
 });
 
 // попап закрытие
-buttonCard.addEventListener('click', function () {
+
+buttonCard.addEventListener('click',function () {
   openPopup(popupAddCard);
 });
