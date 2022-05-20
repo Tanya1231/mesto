@@ -26,8 +26,7 @@ export class FormValidator {
       this._sumbitButton.classList.remove(this._inactiveButtonClass);
       this._sumbitButton.removeAttribute('disabled');
     } else {
-      this._sumbitButton.classList.add(this._inactiveButtonClass);
-      this._sumbitButton.setAttribute('disabled', true);
+    this._disableButtonState()
     }
   }
   _disableButtonState() {

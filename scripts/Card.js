@@ -1,8 +1,5 @@
-import { bigImage } from './index.js';
+import { bigImage } from './utils.js';
 export class Card {
-  _title;
-  _link;
-  _templane;
   constructor(title, link, template) {
     this._title = title;
     this._link = link;
