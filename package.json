@@ -5,9 +5,8 @@
   "main": "index.js",
   "scripts": {
     "build": "webpack --mode production",
-    "dev": "webpack serve",
-    "predeploy": "npm run build",
-    "deploy": "gp-pages -d dist"
+    "dev": "webpack serve"
+
   },
   "repository": {
     "type": "git",
