@@ -1,9 +1,10 @@
-export class FormValidator {
+export default class FormValidator {
   constructor(config, form) {
     this.config = config;
     this._form = form;
     this._sumbitButton = this._form.querySelector(config.sumbitButton);
     this._inactiveButtonClass = config.inactiveButtonClass;
+   // this._inputList = Array.from(this._form.querySelectorAll('.form__container'));
   }
   _setCustomError(input) {
     const validity = input.validity;
@@ -46,6 +47,7 @@ export class FormValidator {
     //дактивация кнопки
     this._setButtonState();
   }
+
   enableValidation = () => {
     const formList = Array.from(document.querySelectorAll('.form'));
     formList.forEach(form => {

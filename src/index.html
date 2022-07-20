@@ -4,15 +4,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Место</title>
-    <link rel="stylesheet" href="./pages/index.css" />
   </head>
 
   <body>
     <div class="page">
       <header class="header">
         <img
+        src="<%=require('./images/header__logo.svg')%>"
           class="header__logo"
-          src="./images/header__logo.svg"
           alt="Место Россия"
         />
       </header>
@@ -20,7 +19,7 @@
         <section class="profile">
           <img
             class="profile__avatar"
-            src="./images/profile__avatar.jpg"
+            src="<%=require('./images/profile__avatar.jpg')%>"
             alt="Аватар"
           />
           <div class="profile__info">
@@ -64,15 +63,15 @@
           <span class="error" id="name-error"></span>
           <input
             class="form__container form__container_type_info"
-            name="text"
+            name="about"
             type="text"
-            id="text"
+            id="about"
             value="Исследователь океана"
             minlength="2"
             maxlength="200"
             required
           />
-          <span class="error" id="text-error"></span>
+          <span class="error" id="about-error"></span>
           <button type="submit" class="form__button form__button_invalid">
             Сохранить
           </button>
@@ -86,24 +85,24 @@
         <form class="form form_popup_add-card" name="card" novalidate>
           <input
             class="form__container form__container_type_inf"
-            name="info"
-            id="info"
+            name="name"
+            id="name"
             type="text"
             placeholder="Название"
             minlength="2"
             maxlength="30"
             required
           />
-          <span class="error" id="info-error"></span>
+          <span class="error" id="name-error"></span>
           <input
             class="form__container form__container_type_src"
-            name="img"
-            id="img"
+            name="link"
+            id="link"
             type="url"
             placeholder="Ссылка на картинку"
             required
           />
-          <span class="error" id="img-error"></span>
+          <span class="error" id="link-error"></span>
           <button type="submit" class="form__button form__button_invalid">
             Создать
           </button>
@@ -118,6 +117,5 @@
         <button type="button" class="popup__button-close"></button>
       </div>
     </div>
-    <script type="module" src="./scripts/index.js"></script>
   </body>
 </html>
