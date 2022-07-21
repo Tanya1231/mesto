@@ -1,11 +1,11 @@
-import './index.css';
+import "./index.css";
 
-import FormValidator from '../components/FormValidator.js';
-import Card from '../components/Card.js';
+import FormValidator from "../components/FormValidator.js";
+import Card from "../components/Card.js";
 import { initialCards } from "../components/initialCards.js";
 import Section from "../components/Section.js";
-import PopupWithImage from '../components/PopupWithImage.js';
-import PopupWithForm from '../components/PopupWithForm.js';
+import PopupWithImage from "../components/PopupWithImage.js";
+import PopupWithForm from "../components/PopupWithForm.js";
 import UserInfo from "../components/UserInfo.js";
 import {
   formProfileEdit,
@@ -40,15 +40,11 @@ const createCard = (name, link) => {
 };
 
 const userInfo = new UserInfo(".profile__title", ".profile__subtitle");
-const popupForm = new PopupWithForm(
-  ".popup_type_profile",
-  {
-    formSubmit: data => {
-      userInfo.setUserInfo(data);
-    },
+const popupForm = new PopupWithForm(".popup_type_profile", {
+  formSubmit: data => {
+    userInfo.setUserInfo(data);
   },
-  "#forma"
-);
+});
 popupForm.setEventListeners();
 
 const openProfile = () => {
@@ -60,16 +56,12 @@ const openProfile = () => {
 
 buttonProfile.addEventListener("click", openProfile);
 
-const addCard = new PopupWithForm(
-  ".popup_add_card",
-  {
-    formSubmit: item => {
-      const cardElement = createCard(item.name, item.link);
-      cardList.addItemPrepend(cardElement);
-    },
+const addCard = new PopupWithForm(".popup_add_card", {
+  formSubmit: item => {
+    const cardElement = createCard(item.name, item.link);
+    cardList.addItemPrepend(cardElement);
   },
-  "#card"
-);
+});
 addCard.setEventListeners();
 
 const handleAddCardForm = () => {
