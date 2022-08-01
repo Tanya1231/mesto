@@ -43,3 +43,4 @@ export default class Card {
     return this._card;
   }
 }
+console.log(evt)
