@@ -1,4 +1,4 @@
-import "./index.css";
+import "../pages/index.html";
 
 import FormValidator from "../components/FormValidator.js";
 import Card from "../components/Card.js";
@@ -15,6 +15,16 @@ import {
   buttonProfile,
   buttonCard,
 } from "../components/utils.js";
+
+fetch('https://mesto.nomoreparties.co/v1/cohort-47/cards', {
+  headers: {
+    authorization: '0162be33-26fc-4582-97e8-0d78f4ad20d1'
+  }
+})
+  .then(res => res.json())
+  .then((result) => {
+    console.log(result);
+  });
 
 const config = {
   form: ".form",
