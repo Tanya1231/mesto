@@ -1,4 +1,4 @@
-import "../pages/index.html";
+import "../pages/index.css";
 
 import FormValidator from "../components/FormValidator.js";
 import Card from "../components/Card.js";
@@ -16,15 +16,27 @@ import {
   buttonCard,
 } from "../components/utils.js";
 
+/*function renderCards() {
 fetch('https://mesto.nomoreparties.co/v1/cohort-47/cards', {
+  method: 'GET',
   headers: {
     authorization: '0162be33-26fc-4582-97e8-0d78f4ad20d1'
   }
 })
   .then(res => res.json())
   .then((result) => {
-    console.log(result);
-  });
+    const initialCards = [ ];
+    result.forEach(element => {
+      const cardAdd = {};
+      cardAdd.name = element.name;
+      cardAdd.link = element.link;
+      initialCards.push(cardAdd);
+  })
+cardList(initialCards)
+  })
+}
+
+renderCards(initialCards);*/
 
 const config = {
   form: ".form",
