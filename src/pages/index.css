@@ -73,3 +73,5 @@
 @import url(../blocks/form/__button/_invalid/form__button_invalid.css);
 
 @import url(../blocks/popup/_open-img/popup_open-img.css);
+
+@import url(../blocks/popup/__container-avatar/popup__container-avatar.css);

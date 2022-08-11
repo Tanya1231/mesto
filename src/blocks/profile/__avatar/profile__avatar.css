@@ -5,6 +5,14 @@
     margin-right: 30px;
   }
 
+  .profile__avatar:hover {
+    background-image: url("../../../images/avatar.svg");
+    background-position: center;
+    background-size: 26px 26px;
+    opacity: 80%;
+    cursor: pointer;
+  }
+
   @media screen and (max-width: 767px) {
     .profile__avatar {
      margin: 0 auto 22.5px;
