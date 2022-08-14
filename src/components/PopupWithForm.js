@@ -24,4 +24,9 @@ export default class PopupWithForm extends Popup {
       this.close();
     });
   }
+  loading(isLoading) {
+    if (isLoading) {
+      this._submitButton.textContent = "Сохранение...";
+    }
+  }
 }

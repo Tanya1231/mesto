@@ -1,92 +1,87 @@
 export default class Api {
-  constructor({ baseUrl, headers}) {
+  constructor({ baseUrl, headers }) {
     this._baseUrl = baseUrl;
     this._headers = headers;
   }
 
   _handleResponse(res) {
-      if(res.ok) {
-        return res.json();
-      } else {
-        return Promise.reject(`Ошибка: ${res.status}`);
-      }
+    if (res.ok) {
+      return res.json();
+    } else {
+      return Promise.reject(`Ошибка: ${res.status}`);
     }
+  }
 
-    getUserInfo() {
-      return fetch(`${this._baseUrl}/users/me`, {
-        headers: this._headers
-      })
-        .then(this._handleResponse)
-    }
+  async getUserInfo() {
+    const res = await fetch(`${this._baseUrl}/users/me`, {
+      headers: this._headers,
+    });
+    return this._handleResponse(res);
+  }
 
-    setUserInfo( {name, about} ) {
-      //loading(true);
-      return fetch(`${this._baseUrl}/users/me`, {
-        method: 'PATCH',
-        headers: this._headers,
-        body: JSON.stringify({
-          name,
-          about
-        })
-      })
-        .then(this._handleResponse)
-    }
+  async editUserInfo(data) {
+    const res = await fetch(`${this._baseUrl}/users/me`, {
+      method: "PATCH",
+      headers: this._headers,
+      body: JSON.stringify({
+        name: data.name,
+        about: data.about,
+      }),
+    });
+    return this._handleResponse(res);
+  }
 
-    getInitialCards() {
-      return fetch(`${this._baseUrl}/cards`, {
-        headers: this._headers,
-      })
-      .then(this._handleResponse)
-    }
-    
+  async getInitialCards() {
+    const res = await fetch(`${this._baseUrl}/cards`, {
+      headers: this._headers,
+    });
+    return this._handleResponse(res);
+  }
 
-    setUserAvatar({ avatar }) {
-          
-      return fetch(`${this._baseUrl}/users/me/avatar`, {
-        method: 'PATCH',
-        headers: this._headers,
-        body: JSON.stringify({
-          avatar
-        })
-      })
-        .then(this._handleResponse)
-    }
+  async setUserAvatar(data) {
+    const res = await fetch(`${this._baseUrl}/users/me/avatar`, {
+      method: "PATCH",
+      headers: this._headers,
+      body: JSON.stringify({
+        avatar: data.avatar,
+      }),
+    });
+    return this._handleResponse(res);
+  }
 
-    addCard({ name, link, alt }) {
-      //loading(true);
-      return fetch(`${this._baseUrl}/cards`, {
-        method: 'POST',
-        headers: this._headers,
-        body: JSON.stringify({
-          name,
-          link,
-          alt
-        })
-      })
-        .then(this._handleResponse)
-    }
+  async addCard(data) {
+    const res = await fetch(`${this._baseUrl}/cards`, {
+      method: "POST",
+      headers: this._headers,
+      body: JSON.stringify({
+        name: data.name,
+        link: data.link,
+      }),
+    });
+    return this._handleResponse(res);
+  }
 
-    putLike(cardID) {
-      return fetch(`${this._baseUrl}/cards/likes/${cardID}`, {
-        method: 'PUT',
-        headers: this._headers,
-      })
-        .then(this._handleResponse)
-    }
+  async putLike(cardId) {
+    const res = await fetch(`${this._baseUrl}/cards/likes/${cardId}`, {
+      method: "PUT",
+      headers: this._headers,
+    });
+    return this._handleResponse(res);
+  }
 
-    deleteCard (cardID) {
-      return fetch(`${this._baseUrl}/cards/${cardID}`, {
-        method: 'DELETE',
-        headers: this._headers,
-      })
-        .then(this._handleResponse)
-    }
+  async deleteCard(cardId) {
+    const res = await fetch(`${this._baseUrl}/cards/${cardId}`, {
+      method: "DELETE",
+      headers: this._headers,
+    });
+    this._handleResponse(res);
+  }
 
-    removeLike(cardID) {
-      return fetch(`${this._baseUrl}/cards/likes/${cardID}`, {
-        method: 'DELETE',
-        headers: this._headers,
-      })
-        .then(this._handleResponse)
-    } 
+  async removeLike(cardId) {
+    const res = await fetch(`${this._baseUrl}/cards/likes/${cardId}`, {
+      method: "DELETE",
+      headers: this._headers,
+    });
+    return this._handleResponse(res);
+  }
 }

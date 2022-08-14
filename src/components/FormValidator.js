@@ -4,9 +4,6 @@ export default class FormValidator {
     this._form = form;
     this._sumbitButton = this._form.querySelector(config.sumbitButton);
     this._inactiveButtonClass = config.inactiveButtonClass;
-    /*this._inputList = Array.from(
-      this._form.querySelectorAll(".form__container")
-    );*/
   }
   _setCustomError(input) {
     const validity = input.validity;

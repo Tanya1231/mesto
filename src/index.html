@@ -37,7 +37,10 @@
             <img class="element__image" src="#" alt="картинка" />
             <div class="element__mask-group">
               <h2 class="element__title"></h2>
+              <div class="element__vector_container">
               <button type="button" class="element__vector"></button>
+              <span class="element__vector-counter">0</span>
+              </div>
             </div>
           </div>
         </template>
@@ -52,7 +55,7 @@
         <form class="form" name="forma" novalidate>
           <input
             class="form__container form__container_type_name"
-            name="profileName"
+            name="name"
             type="text"
             id="name"
             value="Жак-Ив Кусто"
@@ -63,7 +66,7 @@
           <span class="error" id="name-error"></span>
           <input
             class="form__container form__container_type_info"
-            name="profileInfo"
+            name="about"
             type="text"
             id="about"
             value="Исследователь океана"
@@ -123,7 +126,7 @@
         <form class="form form_popup_avatar" name="avatar" novalidate>
           <input
             class="form__container form__container_type_avatar"
-            name="profileAvatar"
+            name="avatar"
             type="url"
             id="avatar"
             value=""
@@ -137,10 +140,11 @@
         </form>
       </div>
     </div>
-    <div class="popup popup_type_confirm">
-      <div class="popup__container popup__container-confirm">
+    <div class="popup popup_type_delete">
+      <div class="popup__container popup__container-delete">
                 <h2 class="popup__heading">Вы уверены?</h2>
           <button type="button" class="popup__button-close"></button>
+          <form class="form form_popup_delete">
           <button type="submit" class="form__button">
             Да
           </button>
