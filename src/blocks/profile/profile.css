@@ -1,4 +1,5 @@
 .profile {
+  position: relative;
   margin: 40px auto 0;
   display: flex;
   justify-content: flex-start;

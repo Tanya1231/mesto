@@ -4,8 +4,8 @@ export default class Card {
       data,
       userId,
       handleCardClick,
-      hadleLikeClick,
-      hadleDisLikeClick,
+      handleLikeClick,
+      handleDisLikeClick,
       handleDeleteCard,
     },
     cardSelector
@@ -17,8 +17,8 @@ export default class Card {
     this._userId = userId;
     this._cardId = data._id;
     this._handleCardClick = handleCardClick;
-    this._hadleLikeClick = hadleLikeClick;
-    this._hadleDisLikeClick = hadleDisLikeClick;
+    this._handleLikeClick = handleLikeClick;
+    this._handleDisLikeClick = handleDisLikeClick;
     this._handleDeleteCard = handleDeleteCard;
     this._cardSelector = cardSelector;
   }
@@ -33,19 +33,24 @@ export default class Card {
     this._card.remove();
     this._card = null;
   };
-  _сardLike() {
-    if (
-      this._likes.some(user => {
-        return this._userId === user._id;
-      })
-    ) {
+  isLiked() {
+    return this._likes.some(user => {
+      return this._userId === user._id;
+    });
+  }
+  _setIsLiked() {
+    if (this.isLiked()) {
       this._likeButton.classList.add("element__vector_active");
     }
   }
   handleLikeCard(data) {
     this._likes = data.likes;
     this._likesCounter.textContent = this._likes.length;
-    this._likeButton.classList.toggle("element__vector_active");
+    if (this.isLiked()) {
+      this._likeButton.classList.add("element__vector_active");
+    } else {
+      this._likeButton.classList.remove("element__vector_active");
+    }
   }
   _deleteCard() {
     if (this._userId !== this._cardOwnerId) {
@@ -57,11 +62,9 @@ export default class Card {
       this._handleDeleteCard(this._cardId);
     });
     this._likeButton.addEventListener("click", () => {
-      if (this._likeButton.classList.contains("element__vector_active")) {
-        this._hadleDisLikeClick(this._cardId);
-      } else {
-        this._hadleLikeClick(this._cardId);
-      }
+      this.isLiked()
+        ? this._handleDisLikeClick(this._cardId)
+        : this._handleLikeClick(this._cardId);
     });
     this._image.addEventListener("click", () => {
       this._handleCardClick(this._name, this._link);
@@ -77,7 +80,7 @@ export default class Card {
     this._likesCounter.textContent = this._likes.length;
     this._image.src = this._link;
     this._image.alt = this._name;
-    this._сardLike();
+    this._setIsLiked();
     this._deleteCard();
     this._setEventListners();
     return this._card;

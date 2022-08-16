@@ -54,7 +54,10 @@ const popupForm = new PopupWithForm(".popup_type_profile", {
       })
       .catch(err => {
         console.log(err);
-      });
+      })
+      .finally(() => {
+        popupForm.loading(false);
+      })
   },
 });
 popupForm.setEventListeners();
@@ -76,7 +79,7 @@ const createCard = item => {
       handleCardClick: (name, link) => {
         bigImage.open(name, link);
       },
-      hadleLikeClick: cardId => {
+      handleLikeClick: cardId => {
         api
           .putLike(cardId)
           .then(data => {
@@ -86,7 +89,7 @@ const createCard = item => {
             console.log(err);
           });
       },
-      hadleDisLikeClick: cardId => {
+      handleDisLikeClick: cardId => {
         api
           .removeLike(cardId)
           .then(data => {
@@ -103,7 +106,7 @@ const createCard = item => {
             .deleteCard(cardId)
             .then(() => {
               deletePopup.close();
-              card.removeCard(card);
+              card.removeCard();
             })
             .catch(err => {
               console.log(err);
@@ -114,7 +117,6 @@ const createCard = item => {
     "#card"
   );
   const cardElement = card.generateCard();
-  cardList.addItemPrepend(cardElement);
   return cardElement;
 };
 
@@ -125,7 +127,7 @@ const handleAddCardForm = () => {
 const cardList = new Section(
   {
     renderer: item => {
-      cardList.addItemPrepend(createCard(item));
+      cardList.addItemAppend(createCard(item));
     },
   },
   ".elements"
@@ -137,11 +139,14 @@ const addCard = new PopupWithForm(".popup_add_card", {
     api
       .addCard(data)
       .then(result => {
-        createCard(result);
+        cardList.addItemPrepend(createCard(result));
       })
       .catch(err => {
         console.log(err);
-      });
+      })
+      .finally(() => {
+        addCard.loading(false);
+      })
   },
 });
 
@@ -157,7 +162,10 @@ const profileAvatar = new PopupWithForm(".popup_type_avatar", {
       })
       .catch(err => {
         console.log(err);
-      });
+      })
+      .finally(() => {
+        profileAvatar.loading(false);
+      })
   },
 });
 
@@ -179,7 +187,7 @@ let userId;
 Promise.all([api.getInitialCards(), api.getUserInfo()]).then(result => {
   const [items, userData] = result;
   userId = userData._id;
-  cardList.renderItems(items.reverse());
+  cardList.renderItems(items);
   userInfo.setUserInfo(userData);
   userInfo.setUserAvatar(userData);
 });
@@ -190,6 +198,6 @@ addCard.setEventListeners();
 bigImage.setEventListeners();
 buttonProfile.addEventListener("click", openProfile);
 buttonCard.addEventListener("click", handleAddCardForm);
-avatarka.addEventListener("click", () => {
+document.querySelector(".profile__avatar-edit").addEventListener("click", () => {
   profileAvatar.open();
 });

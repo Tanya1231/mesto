@@ -5,11 +5,10 @@ export default class UserInfo {
     this._profileAvatar = document.querySelector(profileAvatar);
   }
   getUserInfo() {
-    const userInfo = {
+   return {
       name: this._profileName.textContent,
       about: this._profileInfo.textContent,
     };
-    return userInfo;
   }
   setUserInfo(userInfo) {
     this._profileName.textContent = userInfo.name;
