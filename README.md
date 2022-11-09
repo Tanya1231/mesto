@@ -13,3 +13,12 @@
 В данном проекте пользователь может размещать фотографии, удалять их и ставить лайки. Одностроничный сайт создан по макету из Figma https://www.figma.com/file/PSdQFRHoxXJFs2FH8IXViF/JavaScript.-Sprint-9.
 
 Ссылка на проект  https://tanya1231.github.io/mesto/
+
+# Инструкция для работы с проектом:
+
+- git clone git@github.com:Tanya1231/mesto.git
+- cd mesto
+- npm i webpack --save-dev
+- npm run build
+- npm run dev
+
